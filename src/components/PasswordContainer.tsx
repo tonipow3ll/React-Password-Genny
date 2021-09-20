@@ -7,17 +7,15 @@ import {
   FormControl,
   FormControlLabel,
   FormGroup,
-  FormLabel,
   Grid,
   Input,
   makeStyles,
-  Slider,
   TextField,
   Theme,
   Typography
 } from '@material-ui/core';
 import { numberChars, upperCaseChars, lowerCaseChars, symbolChars } from '../utils/characters'
-import { classicNameResolver } from 'typescript';
+
 // import Checkboxes from './Checkboxes';
 
 const useStyles = makeStyles((theme: Theme) => createStyles({
@@ -46,9 +44,8 @@ const Container = () => {
     symbols: true,
   });
 
-  const [password, setPassword] = React.useState<string | undefined | null | void>("");
+  const [, setPassword] = React.useState<string | undefined | null | void>("");
   const [newPassword, setNewPassword] = React.useState<string | undefined | null | void>("");
-  const [checkAll, setCheckAll] = React.useState();
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setState({
